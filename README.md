@@ -15,7 +15,23 @@ _pd_ny_svd.m_<br/>
 _libsvm (folder)_<br/>
 _augmentation.m_
  
-
+## Tutorial:
+```matlab 
+[model,K,m,n] = pd_cl_nbt(Xs',Xt',Ys,options);
+[label, acc,scores] = svmpredict(full(Yt), [(1:n)', K(m+1:end, 1:m)], model);
+fprintf('\n PD_NBT %.2f%% \n', acc(1));
+```
+Assume traning data Xs with size d x m and test data Xt with size d x n. Label vector Ys and Yt accordingly. 
+pd_cl_nbt accecpts the data and an options struct. With this struct the user can specify:
+```
+NBT Specific:
+options.landmarks ~ Number of Landmarks (int)
+SVM Specific: 
+options.gamma ~ Gamma of SVM (int)
+options.smvc ~ C Parameter of SVM (int)
+options.ker ~ Kernel Type "linear|rbf|lab" (string)
+```
+The functions outputs a libsvm model and a kernel over training and test data modified. The training data is modified by NBT algorithm. <br/>
 ## Reproducing Plots:
 Figure 1: Sensitivity of landmark-parameter: _landmarkperformance_plot.m_<br/>
 Figure 2: Process of NBT: _plot_process.m_
