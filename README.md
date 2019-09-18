@@ -8,7 +8,7 @@ For a demo and reproducing of performance/time results start
 _demo.m_
 
 ## Main file:
-_pd_cl_nbt.m_ (Submission)
+_pd_cl_nbt.m_ (Submission Algorithm)
 
 ## Secondardy Files:
 _pd_ny_svd.m_<br/>
