@@ -3,7 +3,7 @@ Matlab Source Code for the ICLR 2020 Paper submission "Domain Adaptation via Low
 
 Folders are self-explaining. 
 
-## Demo and Repoducing:
+## Demo and Reproducing:
 For a demo and reproducing of performance/time results start
 _demo.m_
 
@@ -22,6 +22,7 @@ Figure 2: Process of NBT: _plot_process.m_
 
 ## Additional Results: 
 Additional results with another domain adaptation sampling strategy can be obtained with demo_gong.m 
+
 
 ## Abstract of Submission:
 Domain adaptation focuses on the reuse of supervised learning models in a new context. Prominent applications can be found in robotics, image processing or web mining. In these areas, learning scenarios change by nature, but often remain related and motivate the reuse of existing supervised models.<br/>
